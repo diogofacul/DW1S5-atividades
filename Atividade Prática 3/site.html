@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Matrícula aluno</h1>
+    <h2>Dados Pessoais</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required><br><br>
+      
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx" required><br><br>
+      
+      <label for="data-nascimento">Data nascimento:</label>
+      <input type="text" id="data-nascimento" name="data-nascimento" placeholder="mm/dd/yyyy" pattern="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/\d{4}$" required><br><br>
+      
+      <label>Sexo:</label>
+      <input type="radio" id="feminino" name="sexo" value="feminino">
+      <label for="feminino">Feminino</label>
+      <input type="radio" id="masculino" name="sexo" value="masculino">
+      <label for="masculino">Masculino</label><br><br>
+      
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" required>
+      
+      <label for="estado">Estado:</label>
+	<select id="estado" name="estado" required>
+	  <option value="">Selecione um estado</option>
+	  <option value="AC">Acre</option>
+	  <option value="AL">Alagoas</option>
+	  <option value="AP">Amapá</option>
+	  <option value="AM">Amazonas</option>
+	  <option value="BA">Bahia</option>
+	  <option value="CE">Ceará</option>
+	  <option value="DF">Distrito Federal</option>
+	  <option value="ES">Espírito Santo</option>
+	  <option value="GO">Goiás</option>
+	  <option value="MA">Maranhão</option>
+	  <option value="MT">Mato Grosso</option>
+	  <option value="MS">Mato Grosso do Sul</option>
+	  <option value="MG">Minas Gerais</option>
+	  <option value="PA">Pará</option>
+	  <option value="PB">Paraíba</option>
+	  <option value="PR">Paraná</option>
+	  <option value="PE">Pernambuco</option>
+	  <option value="PI">Piauí</option>
+	  <option value="RJ">Rio de Janeiro</option>
+	  <option value="RN">Rio Grande do Norte</option>
+	  <option value="RS">Rio Grande do Sul</option>
+	  <option value="RO">Rondônia</option>
+	  <option value="RR">Roraima</option>
+	  <option value="SC">Santa Catarina</option>
+	  <option value="SP">São Paulo</option>
+	  <option value="SE">Sergipe</option>
+	  <option value="TO">Tocantins</option>
+	</select><br><br>
+
+    <h2>Dados da Matrícula</h2>
+      <label for="curso">Curso:</label><br>
+	<input type="radio" id="ads" name="curso" value="ads">
+	<label for="ads">Análise e Desenvolvimento de Sistemas</label><br>
+	<input type="radio" id="eng-mec" name="curso" value="eng-mec">
+	<label for="eng-mec">Engenharia Mecânica</label><br>
+	<input type="radio" id="tsi" name="curso" value="tsi">
+	<label for="tsi">Tecnologia em Sistemas para Internet</label><br><br>
+
+      <label>Disciplina(s) Optativa:</label><br>
+	<input type="checkbox" id="prog-robo" name="disciplinas" value="prog-robo">
+	<label for="prog-robo">Programação de Robôs</label><br>
+	<input type="checkbox" id="int-art" name="disciplinas" value="int-art">
+	<label for="int-art">Desenvolvimento de Inteligências Artificiais</label><br>
+	<input type="checkbox" id="mod-comp" name="disciplinas" value="mod-comp">
+	<label for="mod-comp">Modelagem Computacional</label><br>
+	<input type="checkbox" id="docker" name="disciplinas" value="docker">
+	<label for="docker">Ambientes isolados: desenvolvimento com Docker</label><br><br>
+
+      <label for="sug-disc">Sugestão de disciplinas futuras:</label><br>
+	<textarea id="sug-disc" name="sug-disc" rows="4" cols="50"></textarea><br><br>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
+
